@@ -22,4 +22,4 @@ Date: 2019-03-14
 | knaw| 1    | √ | mods:note 
 | uva | 1    | √ | mods:identifier[@type="patent_number"] 
 
-Total: 2583 Patent codes from **mods:identifier[@type="patent_number"]**
+Total: 2,583 Patent codes (out of 3,674) from **mods:identifier[@type="patent_number"]**
