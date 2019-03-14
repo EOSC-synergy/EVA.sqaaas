@@ -1,0 +1,16 @@
+Person:
+  ! id - attr (same as 'number part of identifier' in header/identifier)
+  ? PersonName
+      ? FamilyNames
+      ? FirstNames
+      ? OtherNames
+  ? Gender (values: 'm', 'v')
+  ? ORCID (format: https://orcid\.org/0000-000(1-[5-9]|2-[0-9]|3-[0-4])[0-9]{3}-[0-9]{3}[0-9X])
+  ? ResearcherID (format: [A-Z]-[0-9]{4}-(19|20)[0-9][0-9])
+  ? ScopusAuthorID (format: [0-9]{10, 11})
+  ? ISNI (format: [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{3}[0-9X])
+  * ElectronicAddress
+  * Affiliation
+      ? startDate - attr (format: yyyy-mm-dd)
+      ? endDate - attr (format: yyyy-mm-dd)
+      ! OrgUnit

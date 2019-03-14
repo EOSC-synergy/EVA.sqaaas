@@ -1,0 +1,15 @@
+OrgUnit:
+  ! id - attr (same as 'number part of identifier' in header/identifier)
+  * Type
+      ! scheme - attr (specify the classification scheme identifier)
+  ? Acronym
+  * Name
+  * Identifier
+  * ElectronicAddress
+  ? PartOf
+      ? startDate - attr (format: yyyy-mm-dd)
+      ? endDate - attr (format: yyyy-mm-dd)
+      ? DisplayName
+      ! OrgUnit
+  * (Classification)
+  * (Link)

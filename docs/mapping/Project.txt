@@ -1,0 +1,33 @@
+Project:
+  ! id - attr (same as 'number part of identifier' in header/identifier)
+  * Type
+      ! scheme - attr (specify classification scheme identifier)
+  ? Acronym
+  * Title
+      ? lang - attr
+  * Identifier
+      ! type - attr
+  ? StartDate
+  ? EndDate
+  ? Consortium
+      * Coordinator (with embedded OrgUnit or Person)
+      * Partner (with embedded OrgUnit or Person)
+      * Contractor (with embedded OrgUnit or Person)
+      * InKindContributor (with embedded OrgUnit or Person)
+      * Member (with embedded OrgUnit or Person)
+  ? Team
+      * PrincipalInvestigator (with Person and optionally 1..* Affiliation)
+      * Contact (with Person and optionally 1..* Affiliation)
+      * Member (with Person and optionally 1..* Affiliation)
+  * Funded
+      ? By (with embedded OrgUnit or Person)
+      ? As (with embedded Funding)
+  * Keyword
+      ? lang - attr
+  * Abstract
+  * Status
+      ! scheme - attr (specify classification scheme identifier)
+  * Uses (with embedded Equipment)
+  * OAMandate
+      ! mandated (format: true/false)
+      ? uri (format: URI)
