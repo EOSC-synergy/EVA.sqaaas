@@ -10,7 +10,7 @@ import scala.xml.{ Utility, XML }
 object SearchPatents extends App {
 
   // fill in the repository you want to search
-  val repositoryName = "tue"
+  val repositoryName = "um"
 
   val outputDir = File("target/patents") / repositoryName
   if (outputDir.notExists)
@@ -23,10 +23,12 @@ object SearchPatents extends App {
     layer2 <- layer1.children
     publications <- layer2.children
     knawLong = publications / "knaw_long"
+//    metadata = publications / "metadata"
     if knawLong.exists
     if isPatent(knawLong)
     _ = println(knawLong)
     _ = knawLong copyTo (outputDir / s"${ publications.name }.xml")
+//    _ = metadata copyTo (outputDir / s"${ publications.name }.xml")
   } yield knawLong
 
   patentLongFiles.foreach(println)
