@@ -89,6 +89,10 @@ object ReadPatents extends App {
     println(dateIssued)
   }
 
+  def attributeEquals(name: String, value: String)(node: scala.xml.Node): Boolean = {
+    node.attribute(name).toSeq.flatten.map(_.text).contains(value)
+  }
+
   def findRelatedItemPart(file: File): Unit = {
     val xml = Utility.trim(XML.loadFile(file.toJava))
 
