@@ -10,7 +10,7 @@ https://openaire-guidelines-for-cris-managers.readthedocs.io/en/v1.1.1/cerif_xml
 
 Internal Identifier
 -------------------
-`header / identifier`
+`knaw_long / uploadid`
 
 
 Type
@@ -56,7 +56,7 @@ Also, Narcis records persons, while CERIF asks for organisations!
 
 PatentNumber
 ------------
-**not recorded yet, but will be added ASAP**
+`knaw_long // patent_number`
 
 
 Inventors
@@ -65,12 +65,16 @@ Inventors
 
 Narcis aggregates and doesn't have a PRS identifier for each person that is listed as author.
 
+`knaw_long // name` with `mcRoleTerm = 'inv'`
+
 
 Holders
 -------
 **Narcis doesn't record the PRS identifiers of the authors in `knaw_long`. If a `nameIdentifier` is given in `knaw_long`, we could do a lookup in VSOI and add the PRS identifier. Only then can we add the authors to this CERIF format.**
 
 Narcis aggregates and doesn't have a PRS identifier for each person that is listed as author.
+
+`knaw_long // name` with `mcRoleTerm = 'pth'` # TODO bestaan deze?
 
 
 Abstract
