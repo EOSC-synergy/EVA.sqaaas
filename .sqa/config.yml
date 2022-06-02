@@ -1,0 +1,17 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+sqa_criteria:
+  QC.FAIR:
+    repos:
+      this_repo:
+        commands:
+        - fair-eva.py -ID 10261/157765 -R oai-pmh -B http://digital.csic.es/dspace-oai/request
+          --tool_endpoint http://localhost:9090/v1.0/rda/rda_all
+        container: qc.fair_pretty-goldenrod-squid
+timeout: 600

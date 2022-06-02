@@ -1,0 +1,11 @@
+services:
+  qc.fair_pretty-goldenrod-squid:
+    build:
+      context: ./github.com/EOSC-synergy/sqaaas-tooling/QC.FAIR
+      dockerfile: Dockerfile
+    volumes:
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+version: '3.7'
